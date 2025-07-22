@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:utilidades/src/app/app_routes.dart';
 import 'package:utilidades/src/services/auth_service.dart';
+import 'package:utilidades/src/views/firebase_login_view.dart';
 import 'package:utilidades/src/views/login_view.dart';
 
 class AppWidget extends StatelessWidget {
@@ -10,9 +11,10 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Utilidades",
-      initialRoute: "/home",
+      initialRoute: "/loginfirebase",
       routes: {
         "/login": (context) => LoginView(),
+        "/loginfirebase" : (context) => const FirebaseLoginView(),
         ...generateRoutes()
       },
     );
