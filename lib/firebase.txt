@@ -1,0 +1,54 @@
+-------------------------------------------------------
+
+RIVERPOD - é uma biblioteca de gereniamento de estado desenvolvida por Remi Rousselete (criador do provider).
+eke foi criado para corrigir limitações do provider e oferecer uma abordagem mais robusta, segura e flexível.
+
+vantagens
+- segura em tempo de compilação: detecta erros mais cedo
+- não depende de buildcontext
+- testável e modular
+- suporte nativo para providers assincronos, como futureProvider e streamProvider
+
+-------------------------------------------------------
+
+BloC - Business Logic Component
+é um padrão de arquitetura que separa a lógica de negócios de interface
+de usuário usando streams.
+ele foi criado pelo google para facilitar o reuso da logica em varios widgets.
+
+vantagens
+- muito usado em apps corporativos
+- força uma arquitetura bem definida
+- baseado em streams  (fluxo de dados)
+
+conceitos principais
+- evento: entrada enviada pelo usuário
+- state: saída do bloco
+- bloco: recebe eventos e emite estados
+
+para usar preciamos instalar o pacote flutter_bloc
+
+BloC + CUBIT
+
+cubit é uma versão mais simples e direta do bloc, sem eventos, voce apenas
+chama metodos e emite estados diretamente
+
+-----------------------------------------------------
+
+FIREBASE
+firebase é uma plataforma da google para desenvolvimento de aplicativos web e mobile
+ela oferece um conjunto de serviços prontos que ajudam voce a construir, melhorar e 
+escalar aplicativos rapidamente, "sem precisar criar tudo no back-end".
+
+PRINCIPAIS FUNCIONALIDADES  
+- autenticação - login com e-mail/senha, google, facebook, apple, telefone e etc.
+- Firestone - banco de dados noSQL em tempo real, escalável e com sincronização automatica
+- Realtime database - banco de dados noSQL com foco em dados em tmepo
+- Storage - armazenamento de arquivos (imagens, videos pdf e etc)
+- Hosting - hospedagem rápida para sites estáticos como flutter web, react, angular e etc
+- Functions - funções servless com node.js para logica no backend
+- Analytics - monitoramento de uso, comportamento de usuario, eventos e etc
+- Crashlytics - personalização de comportamento do app remotamente
+- Clout messagin (FCM) - envio de notificações push para android, ios e web
+
+o firebase tem um plano gratuito para pequenos projetos que é bem generoso e um plano pago para projetos escalarem.

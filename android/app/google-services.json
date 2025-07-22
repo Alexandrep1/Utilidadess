@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "304358609231",
+    "project_id": "utilidadess-83263",
+    "storage_bucket": "utilidadess-83263.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304358609231:android:249e37bc1cf380419cf53a",
+        "android_client_info": {
+          "package_name": "com.example.utilidades"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6xyxPTFyLbf4dxN2tmrW8-hv_fK1blbQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

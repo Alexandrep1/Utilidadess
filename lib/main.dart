@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:utilidades/src/app/app_widget.dart';
+import 'package:utilidades/src/views/counter_cubit.dart';
 
 void main() {
-  runApp(AppWidget());
-}
 
-/* 
+  /* 
 -------------------------------------------------------
 
 riverpod - é uma biblioteca de gereniamento de estado desenvolvida por Remi Rousselete (criador do provider).
@@ -44,4 +44,15 @@ chama metodos e emite estados diretamente
 
  */
 
+  //runApp(myApp());
 
+}
+
+class myApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: BlocProvider(create: (_) => CounterCubit(), child: CounterPage()),
+    );
+  }
+}
