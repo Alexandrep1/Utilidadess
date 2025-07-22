@@ -38,7 +38,7 @@ class BlocExampleView extends StatelessWidget {
       child: Builder(
         builder: (context) {
           return Scaffold(
-            appBar: AppBar(title: const Text('Exemplo com BLoC')),
+            appBar: AppBar(title: const Text('Eu gosto de pornoGay')),
             body: Center(
               child: BlocBuilder<CounterBloc, CounterState>(
                 builder: (context, state) {
