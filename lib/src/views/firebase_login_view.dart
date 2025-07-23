@@ -8,12 +8,36 @@ class FirebaseLoginView extends StatefulWidget {
 }
 
 class _FirebaseLoginViewState extends State<FirebaseLoginView> {
+  bool _loading = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("login com firebase ")),
+      appBar: AppBar(title: Text("Login com Firebase")),
       body: Padding(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            TextFormField(
+              decoration: const InputDecoration(labelText: "E-mail"),
+              validator: (value) {
+                return value == null || value.isEmpty ? "Informe o e-mail" : null;
+              },
+            ),
+            TextFormField(
+              decoration: const InputDecoration(labelText: "Senha"),
+              obscureText: true,
+              validator: (value) {
+                return value == null || value.length < 6 ? "Senha inválida" : null;
+              },
+            ),
+            SizedBox(height: 20,),
+            //botao ou loading
+            _loading ? const CircularProgressIndicator() :
+            ElevatedButton(onPressed: () => {}, child: Text("entrar")),
+            TextButton(onPressed: () => {}, child: const Text("não tem conta? cadastre-se"))
+          ],
+        ),
       ),
     );
   }
