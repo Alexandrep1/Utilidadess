@@ -2,30 +2,25 @@ class AlunosModel {
   final String id;
   final String nome;
   final int idade;
-  final String email;
+  final String turma;
 
   AlunosModel({
     required this.id,
     required this.nome,
     required this.idade,
-    required this.email,
+    required this.turma,
   });
 
-  factory AlunosModel.fromFireStore(Map<String, dynamic> data) {
+  factory AlunosModel.fromMap(Map<String, dynamic> data, String id) {
     return AlunosModel(
-      id: data['id'] as String,
-      nome: data['nome'] as String,
-      idade: data['idade'] as int,
-      email: data['email'] as String,
+      id: id,
+      nome: data['nome'],
+      idade: data['idade'],
+      turma: data['turma'],
     );
   }
 
   Map<String, dynamic> toMap() {
-    return {
-      'id': id,
-      'nome': nome,
-      'idade': idade,
-      'email': email,
-    };
+    return {'nome': nome, 'idade': idade, 'turma': turma};
   }
 }

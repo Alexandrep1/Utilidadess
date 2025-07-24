@@ -1,4 +1,7 @@
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:utilidades/src/services/auth_firebase_service.dart';
+import 'package:utilidades/src/models/usuario_model.dart';
+
+/* import 'package:shared_preferences/shared_preferences.dart';
 import 'package:utilidades/src/models/user_model.dart';
 import 'package:utilidades/src/services/api_service.dart';
 
@@ -22,5 +25,15 @@ class LoginController {
     }
 
     return false;
+  }
+}
+ */
+
+class LoginController {
+  final AuthFirebaseService _authService = AuthFirebaseService();
+
+  Future<bool> login(String email, String senha) async {
+    final usuario = await _authService.login(email, senha);
+    return usuario != null;
   }
 }

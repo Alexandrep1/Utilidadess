@@ -9,6 +9,9 @@ WidgetsFlutterBinding.ensureInitialized();
 await Firebase.initializeApp(
   options: DefaultFirebaseOptions.currentPlatform,
 );
+
+//remote config
+
 runApp(AppWidget());
 }
 

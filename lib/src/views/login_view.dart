@@ -42,7 +42,7 @@ class _LoginViewState extends State<LoginView> {
     password : _passwordController.text.trim()
   );
 
-  final success = await _controller.login(user);
+  final success = await _controller.login(user.username, user.password );
 
   setState(() {
     _isLoading = false;
