@@ -19,6 +19,11 @@ await FirebaseRemoteConfig.instance.setConfigSettings(
   minimumFetchInterval: const Duration(minutes: 1)
 ),
 );
+await FirebaseRemoteConfig.instance.setDefaults(
+  const {
+    'saudacao' : "bem vindo"
+  }
+);
 
 runApp(AppWidget());
 }
